@@ -1,24 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link 
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" 
-      rel="stylesheet">
-    
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
     <!-- page title -->
     <title>Alpine SignUp</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  </head>
+</head>
 
-  <body>
-      <main 
-        x-data="getData()" 
-        @scroll.window="onScroll()" 
-        class="antialiased relative text-gray-600">
+<body>
+    <main x-data="getData()" @scroll.window="onScroll()" class="antialiased relative text-gray-600">
         <!-- hero starts-->
         <!-- hero ends-->
 
@@ -30,8 +25,56 @@
 
         <!-- contact starts-->
         <!-- contact ends-->
-        </main>
-        
-        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-  </body>
+    </main>
+
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script>
+        function getData() {
+            return {
+                formData: {
+                    email: "",
+                    name: "",
+                    subject: "",
+                    message: "",
+                },
+                isLoading: "false",
+                isError: "false",
+                buttonLabel: "Submit",
+                isVisible: "hero",
+                onScroll() {
+                    if (
+                        document.querySelector('#hero')
+                        .getBoundingClientRect().top >= 0 && document.querySelector('#hero')
+                        .getBoundingClientRect().bottom <= window.innerHeight) {
+                        this.isVisible = "hero"
+                    }
+
+                    if (
+                        document.querySelector('#service')
+                        .getBoundingClientRect().top >= 0 &&
+                        document.querySelector('#service')
+                        .getBoundingClientRect().bottom <= window.innerHeight) {
+                        this.isVisible = "service"
+                    }
+
+                    if (
+                        document.querySelector('#about')
+                        .getBoundingClientRect().top >= 0 && document.querySelector('#about')
+                        .getBoundingClientRect().bottom <= window.innerHeight) {
+                        this.isVisible = "about"
+                    }
+
+                    if (
+                        document.querySelector('#contact')
+                        .getBoundingClientRect().top >= 0 && document.querySelector('#contact')
+                        .getBoundingClientRect().bottom <= window.innerHeight) {
+                        this.isVisible = "contact"
+                    }
+                },
+            }
+        }
+    </script>
+</body>
+
 </html>
