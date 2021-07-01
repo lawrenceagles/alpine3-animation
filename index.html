@@ -68,6 +68,85 @@
         <!-- hero ends-->
 
         <!-- service starts-->
+
+        <section id="service" class="bg-gray-50 pt-20 pb-28 px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center">
+                    <h1 class="text-6xl font-bold text-gray-800">Services</h1>
+                    <p class="pt-2">Here's what I offer</p>
+                </div>
+                <div class="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+                    <div x-show="isVisible === 'service'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform scale-0"
+                        x-transition:enter-end="opacity-100 transform scale-100" class="relative">
+
+                        <div class="absolute z-10 inset-0 bg-gradient-to-r 
+              from-green-400 to-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 
+              sm:-rotate-6 sm:rounded-lg">
+                        </div>
+
+                        <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-12">
+                            <ion-icon name="phone-portrait-outline" class="text-5xl text-cyan-500">
+                            </ion-icon>
+                            <h2 class="pt-3 font-bold text-2xl">
+                                Responsive Websites
+                            </h2>
+                            <p class="pt-3">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequuntur aperiam quibusdam
+                                repudiandae et necessitatibus culpa libero
+                                mollitia.
+                            </p>
+                        </div>
+                    </div>
+                    <div x-show="isVisible === 'service'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform scale-0"
+                        x-transition:enter-end="opacity-100 transform scale-100" class="relative">
+
+                        <div class="absolute z-10 inset-0 bg-gradient-to-r from-green-400 
+              to-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 
+              sm:-rotate-6 sm:rounded-lg">
+                        </div>
+
+                        <div class="relative z-20 bg-white h-full rounded-md 
+            shadow-md px-10 py-12">
+                            <ion-icon name="layers-outline" class="text-5xl text-cyan-500">
+                            </ion-icon>
+                            <h2 class="pt-3 font-bold text-2xl">Web Apps</h2>
+                            <p class="pt-3">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequuntur aperiam quibusdam
+                                repudiandae et necessitatibus culpa libero
+                                mollitia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div x-show="isVisible === 'service'" x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform scale-0"
+                        x-transition:enter-end="opacity-100 transform scale-100" class="relative">
+
+                        <div
+                            class="absolute z-10 inset-0 bg-gradient-to-r from-green-400 to-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg">
+                        </div>
+
+                        <div class="relative z-20 bg-white h-full rounded-md shadow-md px-10 py-12">
+                            <ion-icon name="chatbubbles-outline" class="text-5xl text-cyan-500">
+                            </ion-icon>
+                            <h2 class="pt-3 font-bold text-2xl">
+                                Consultation
+                            </h2>
+                            <p class="pt-3">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequuntur aperiam quibusdam
+                                repudiandae et necessitatibus culpa libero
+                                mollitia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- service ends-->
 
         <!-- about starts-->
