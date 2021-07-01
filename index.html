@@ -292,6 +292,34 @@
                         this.isVisible = "contact"
                     }
                 },
+
+                handleSubmit() {
+                    // Ensures all fields have data before submitting
+                    if (!this.formData.email.length ||
+                        !this.formData.name.length ||
+                        !this.formData.subject.length ||
+                        !this.formData.message.length) {
+                        alert("Please fill out all required field and try again!")
+                        return;
+                    }
+                    this.buttonLabel = 'Submitting...'
+                    fetch('https://reqres.in/api/users', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(this.formData)
+                        })
+                        .then((response) => {
+                            document.getElementById("contactForm").reset()
+                        })
+                        .catch((error) => {
+                            console.log(error.message)
+                        })
+                        .finally(() => {
+                            this.buttonLabel = 'Submit'
+                        })
+                }
             }
         }
     </script>
